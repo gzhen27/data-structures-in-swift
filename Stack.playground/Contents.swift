@@ -5,6 +5,21 @@ public struct Stack<Element> {
     private var container: [Element] = []
     
     public init() {}
+    // MARK: - main operations
+    
+    /**
+     adds an element to the top of a stack.
+     */
+    public mutating func push(_ element: Element) {
+        container.append(element)
+    }
+    
+    /**
+     removes the top element of the stack.
+     */
+    public mutating func pop() -> Element? {
+        container.popLast()
+    }
 }
 
 extension Stack: CustomStringConvertible {
