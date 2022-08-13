@@ -43,4 +43,27 @@ extension Stack: CustomStringConvertible {
     }
 }
 
+// usage case:
+var stack = Stack<String>()
+stack.push("A")
+stack.push("B")
+stack.push("C")
 
+print(stack)
+print("\n The top element on the stack is: \(stack.peek() ?? "Not Found")")
+print("\n Is this stack empty? \n \(stack.isEmpty ? "Yes, it is empty" : "No, it is not empty")")
+
+if let last = stack.pop() {
+    assert("C" == last)
+    print("\n \(last) is popped from the stack \n")
+}
+
+print(stack)
+print("\n The top element on the stack is: \(stack.peek() ?? "Not Found")")
+print("\n Is this stack empty? \n \(stack.isEmpty ? "Yes, it is empty" : "No, it is not empty")\n")
+
+while stack.pop() != nil {}
+
+print(stack)
+print("\n The top element on the stack is: \(stack.peek() ?? "Not Found")")
+print("\n Is this stack empty? \n \(stack.isEmpty ? "Yes, it is empty" : "No, it is not empty")")
