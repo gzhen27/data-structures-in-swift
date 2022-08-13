@@ -20,6 +20,17 @@ public struct Stack<Element> {
     public mutating func pop() -> Element? {
         container.popLast()
     }
+    
+    /**
+     get the last element of the Stack without removing it
+     */
+    public mutating func peek() -> Element? {
+        container.last
+    }
+    
+    public var isEmpty: Bool {
+        container.count == 0
+    }
 }
 
 extension Stack: CustomStringConvertible {
